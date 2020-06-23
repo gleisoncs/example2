@@ -21,9 +21,9 @@ You will need Maven to build this project. You can build the package using the f
 
 ## Executing
 
-Execute manually the Main class
-
-    mvn spring-boot:run
+1. Install SQL Server or create a new database.
+2. Modify hibernate.cfg.xml
+3. Execute manually the Main class. 
 
 ## License
 MIT
