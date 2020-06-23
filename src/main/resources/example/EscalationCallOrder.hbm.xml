@@ -1,0 +1,22 @@
+<?xml version="1.0"?> 
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="example.EscalationCallOrder" table="escalation_call_order">
+		<id name="id" type="long">
+			<column name="id" not-null="true" />
+			
+		</id>
+		
+		<property name="skipUserOnAvialibility" type="boolean">
+			<column name="skip_user_avialibility" not-null="true" default="0"/>
+		</property>
+		<property name="name" column="name" />
+		<property name="createdDate" column="created_date" not-null="true" type="timestamp"/>
+		<property name="lastUpdatedDate" column="last_updated_date" not-null="false" type="timestamp"/>
+		<!-- <many-to-one name="tenant" column="tenant_id" class="example.Tenant" /> -->
+	</class>
+</hibernate-mapping> 
